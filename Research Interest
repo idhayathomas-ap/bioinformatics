@@ -1,0 +1,60 @@
+Research Interest
+
+1. Scalable Machine Learning and Data-Efficient Algorithms
+2. Explainable Artificial Intelligence for High-Stakes Applications
+3. Computational Drug Discovery using AI and Data-Driven Models
+4. Bayesian Optimization and Decision-Making under Uncertainty
+5. Integration of Machine Learning with Bioinformatics and Healthcare Analytics
+6. Development of End-to-End, Reproducible AI Pipelines for Scientific Applications
+
+Here’s a **refined and targeted version of your AI pipeline**, tailored specifically for **bioinformatics and computational biology labs** at the National University of Singapore School of Computing and related interdisciplinary groups:
+
+---
+
+AI Pipeline for Bioinformatics and Computational Biology
+
+My research aims to develop an end-to-end, scalable AI pipeline that integrates machine learning with bioinformatics workflows to accelerate biological discovery and drug development. The pipeline is designed to handle heterogeneous biological data, ensure reproducibility, and generate interpretable insights for high-impact applications.
+
+1. Data Acquisition and Integration
+
+* Collect multi-source biological data, including genomic, proteomic, and chemical datasets from public repositories (e.g., ChEMBL, PDB, UniProt)
+* Integrate structured and unstructured data for unified analysis
+* Perform data curation, normalization, and quality control
+
+2. Feature Engineering and Representation Learning
+
+* Generate molecular descriptors and fingerprints for chemical compounds
+* Encode protein sequences and structures using advanced embedding techniques
+* Apply dimensionality reduction and feature selection to improve model efficiency
+
+3. Predictive Modeling and Multi-target Learning
+
+* Develop machine learning and deep learning models for predicting biological activity and drug–target interactions
+* Implement multi-target prediction frameworks for complex diseases
+* Use ensemble methods and transfer learning to improve performance
+
+4. Explainability and Model Interpretation
+
+* Apply explainable AI techniques (e.g., SHAP, LIME) to identify key biological and chemical features
+* Interpret model outputs to derive biologically meaningful insights
+* Support hypothesis generation for experimental validation
+
+5. Structural Validation and Simulation
+
+* Perform molecular docking and binding affinity analysis to validate predicted drug candidates
+* Integrate structure-based approaches with data-driven predictions
+* Analyze protein–ligand interactions to refine candidate selection
+
+6. Deployment and Reproducibility
+
+* Develop containerized workflows using Docker for reproducibility
+* Deploy models on cloud platforms for scalability and collaboration
+* Build user-friendly interfaces or APIs for broader accessibility
+
+7. Translational Impact
+
+*Apply the pipeline to real-world problems such as metabolic disorders, kidney diseases, and other complex conditions
+*Collaborate with interdisciplinary teams to bridge computational predictions with experimental and clinical research
+
+
+If you want, I can further **map this pipeline to a specific NUS lab (e.g., a professor working in bioinformatics or systems biology)** and make it look highly personalized for your application.
