@@ -1,0 +1,72 @@
+Machine Learning-Based Multi-Target Drug Discovery for Uric Acid Kidney Stone Treatment
+
+Objective
+The primary objective of this study is to develop a machine learning based predictive framework for identifying potential drug compounds for the treatment of uric acid kidney stones. The study focuses on multiple biological targets, namely Xanthine Dehydrogenase (XDH), GLUT9, NLRP3 inflammasome, and AgrA. The specific objectives are:
+•	To construct predictive models for identifying active drug compounds.
+•	To compare the performance of multiple machine learning algorithms such as Random Forest, XGBoost, and Support Vector Machine.
+•	To interpret model predictions using SHAP explainability techniques.
+•	To validate predicted compounds through molecular docking studies.
+1. Introduction
+Uric acid kidney stones are formed due to excessive accumulation of uric acid in the urinary tract, often resulting from metabolic imbalance, reduced urate excretion, or increased purine metabolism. Key proteins such as Xanthine Dehydrogenase play a crucial role in uric acid production, while transporters like GLUT9 regulate urate reabsorption. Additionally, inflammatory pathways involving the NLRP3 inflammasome contribute to disease progression.
+Traditional drug discovery methods are time-consuming and expensive. With the advancement of computational techniques, machine learning (ML) approaches have emerged as powerful tools for accelerating drug discovery. These methods enable the prediction of biological activity of compounds based on molecular structure, thereby reducing experimental costs and time.
+In this study, a multi-target computational approach is proposed to identify compounds that can simultaneously inhibit multiple targets associated with uric acid kidney stone formation.
+2. Dataset
+The dataset used in this study was compiled from publicly available chemical and bioactivity databases such as ChEMBL, PubChem, and BindingDB. Due to limitations in direct extraction from certain databases, alternative sources were utilized to obtain relevant bioactivity data. The dataset consists of the following attributes:
+•	SMILES (Simplified Molecular Input Line Entry System): Represents the chemical structure of compounds.
+•	Biological Activity Values: IC50 values for each target protein.
+•	Derived pIC50 Values: Converted from IC50 for normalization.
+•	Target Labels: Activity values corresponding to XDH, GLUT9, NLRP3, and AgrA.
+Data preprocessing steps included:
+•	Removal of duplicate entries
+•	Handling missing values
+•	Conversion of IC50 to pIC50 values
+•	Transformation into classification labels (active/inactive) based on threshold values
+Molecular descriptors and fingerprints (Morgan fingerprints of 2048 bits) were generated using RDKit and padel descriptors to serve as input features for the models.
+S. No	Target Name	Drug Compounds
+1.	Xanthine Dehydrogenase (2E1Q)	1028
+2.	Urate bound Human URAT1 (9B1J)	1227
+3.	solute carrier family 2 member 9 (GLUT9)	19
+3.	NLRP3	8886
+4.	Arg A	380
+
+3. Methodology
+The proposed methodology consists of several stages, including data preprocessing, feature extraction, model development, explainability analysis, and validation.
+ 
+Figure 1. Methodology of UAKS Drug Prediction
+3.1 Feature Extraction
+Molecular fingerprints were generated using the Morgan algorithm, which encodes structural information of compounds into binary vectors. These fingerprints serve as input features for machine learning models.
+3.2 Model Development
+Three machine learning models were implemented:
+•	Random Forest Classifier: An ensemble learning method that constructs multiple decision trees.
+•	XGBoost Classifier: A gradient boosting algorithm known for high predictive performance.
+•	Support Vector Machine (SVM): A classification algorithm that separates data using optimal hyperplanes.
+3.3 Model Training and Evaluation
+The dataset was split into training and testing sets using an 80:20 ratio and various cross validation. Model performance was evaluated using:
+•	Accuracy
+•	Cross-validation scores
+
+3.4 Model Explainability
+SHAP (SHapley Additive exPlanations) was used to interpret model predictions. SHAP values provide insights into the contribution of each molecular feature toward the prediction outcome, enabling identification of key structural components responsible for activity.
+3.5 Molecular Docking
+Top predicted compounds were subjected to molecular docking using AutoDock Vina. Docking simulations were performed against all selected protein targets to evaluate binding affinity and interaction stability.
+4. Experiments and Data Interpretation
+The models were trained and tested using the prepared dataset, and their performance was compared.
+•	The Random Forest model demonstrated stable performance with good generalization ability.
+•	XGBoost achieved the highest accuracy due to its boosting mechanism.
+•	SVM showed competitive performance but required careful feature scaling.
+Experiment1 
+Model	Accuracy	Precision (Avg)	Recall (Avg)	F1-Score (Avg)
+Random Forest	0.848	0.85	0.85	0.85
+XGBoost	0.860	0.86	0.86	0.86
+Support Vector Machine	0.860	0.86	0.86	0.86
+
+SHAP analysis revealed that specific molecular fingerprint features significantly influenced prediction outcomes. These features correspond to important chemical substructures responsible for biological activity.
+Docking results further validated the predicted compounds, showing favourable binding energies with the target proteins. Compounds such as Apigenin and related phytochemicals exhibited strong interactions, supporting their potential as therapeutic candidates.
+5. Conclusion
+This study presents a comprehensive machine learning-based framework for the prediction of drug compounds targeting uric acid kidney stone formation. The integration of multiple machine learning models, and explainability methods provides a robust approach for drug discovery.
+The results demonstrate that:
+•	Machine learning models can effectively predict biologically active compounds.
+•	Multi-target prediction enhances the relevance of identified drug candidates.
+•	SHAP analysis improves interpretability and reliability of predictions.
+•	Molecular docking validates the computational findings.
+The proposed approach offers a cost-effective and efficient strategy for identifying potential therapeutic compounds, which can be further validated through experimental studies.
